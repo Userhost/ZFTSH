@@ -1,0 +1,16 @@
+program z2;
+var num:integer;
+begin
+  readln(num);
+  if ((num div 100 mod 10) = (num mod 10)) then
+  begin
+    writeln('является');
+  end
+  else  
+  begin
+    if ((num div 100 mod 10) > (num mod 10)) then
+      writeln(num mod 10 ,num div 10 mod 10, num mod 10)
+    else
+      writeln(num div 100 mod 10, num div 10 mod 10, num div 100 mod 10);
+  end;
+end.
