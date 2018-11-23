@@ -1,0 +1,11 @@
+program z8;
+var mas : array[4] of integer;
+    a,b,c,d:integer;
+begin
+readln(mas[1],mas[2],mas[3],mas[4]);
+sort(mas);
+a:=mas[1];
+b:=mas[2];
+c:=mas[3];
+d:=mas[4];
+end.
