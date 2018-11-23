@@ -1,0 +1,22 @@
+program z5;
+var x,y:integer;
+begin 
+  readln(x,y);
+  if ((x = 0) and(y = 0)) then
+  begin
+    writeln('начало координат');
+  end
+  else
+  begin
+    if ((x = 0) or (y = 0)) then
+      writeln('на оси координат');
+    if ((x > 0) and (y > 0))then
+      writeln(1);
+    if ((x < 0) and (y > 0))then
+      writeln(2);
+    if ((x < 3) and (y < 0))then
+      writeln(3);
+      if ((x > 0) and (y < 0))then
+      writeln(4);
+  end;
+end.
