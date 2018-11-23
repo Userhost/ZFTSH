@@ -1,0 +1,15 @@
+program z4;
+var Ax,Bx,Cx,Ay,By,Cy,rAB,rBC,rAC:integer;
+begin
+  readln(Ax,Ay,Bx,By,Cx,Cy);
+  rAB := round(sqrt(sqr(Bx-Ax)+sqr(By-Ay)));
+  rBC := round(sqrt(sqr(Cx-Bx)+sqr(Cy-By)));
+  rAC := round(sqrt(sqr(Cx-Ax)+sqr(Cy-Ay)));
+  if ((rAC<rBC) and (rAC<rAB))then
+    writeln('AC')
+  else
+    if ((rAB<rBC) and (rAB<rAC))then
+    writeln('AB')
+    else
+      if ((rBC<rAC) and (rBC<rAB))then
+      writeln('BC');
