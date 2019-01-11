@@ -1,0 +1,25 @@
+var min1,min2,a,max1,res:integer;
+begin
+min1:=10000;
+min2:=10000;
+max1:=0;
+readln(a);
+while a <> 0 do
+begin
+    if a < max(min1,min2)then
+      if (min1<min2) then
+        min2:=a
+      else
+        min1:=a;
+    if a > max1 then
+      max1:=a;
+    readln(a);
+end;
+if (min(min1,min2)<0)then
+begin
+  res := min(min1,min2)*max1;  
+end
+else
+  res:=min1*min2;
+writeln(res);
+end.
