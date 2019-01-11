@@ -1,0 +1,16 @@
+var max,min,i : integer;
+    n : int64;
+begin
+readln(n);
+max:=0;
+min:=9;
+while n > 0 do
+begin
+  if n mod 10 < min then
+    min := n mod 10;
+  if n mod 10 > max then
+    max := n mod 10;
+  n := n div 10;
+end;
+writeln(max,' ',min);
+end.
