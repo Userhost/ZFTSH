@@ -1,0 +1,20 @@
+var n:int64;
+begin
+  readln(n);
+  if n = 1 then
+    n -= 1; 
+  while n > 1 do
+  begin
+    if n mod 3 = 0 then
+     n := n div 3
+    else
+    begin
+     n := 0;
+     break;
+    end;
+  end;
+  if n = 1 then
+    writeln('yes')
+  else
+    writeln('no')
+end.
