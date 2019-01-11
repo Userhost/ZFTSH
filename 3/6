@@ -1,0 +1,12 @@
+var n,s:int64;
+begin
+readln(n);
+s:=0;
+  while n > 0 do
+  begin
+    if ((n < 1000) and ( n > 99) and (n mod 4 = 0)) then
+      s += n;
+    readln(n);
+  end;
+writeln(s);
+end.
