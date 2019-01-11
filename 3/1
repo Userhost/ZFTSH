@@ -1,0 +1,10 @@
+var n,s,i:integer;
+begin
+readln(n);
+for i:=1 to n do
+begin
+  if (n mod i = 0)then
+    s += i;
+end; 
+writeln(s);
+end.   
