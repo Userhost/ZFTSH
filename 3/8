@@ -1,0 +1,33 @@
+var a:array of integer;
+    s,i,max:integer;
+function HowMany2s(mass : array of integer;n:integer):integer;
+  var count:integer;
+  begin
+    count := 1;
+    while mass[n] = 2 do
+    begin
+      count +=1;
+      n +=1;
+    end;
+     HowMany2s:=count;
+  end;
+ 
+begin
+  setLength(a,1000);
+  max := 0;
+  readln(a[0]);
+  i:=1;
+  while a[i] <> 0 do
+  begin
+    i +=1;
+    readln(a[i]);
+  end;
+  for i:= 1 to length(a)-1 do
+  begin
+    if a[i]= 2 then
+     s:= HowMany2s(a,i);
+    if s > max then
+     max := s;
+  end;
+  writeln(s);
+end.
