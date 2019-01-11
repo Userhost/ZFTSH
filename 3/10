@@ -1,0 +1,47 @@
+var a,i,max3,max13,max39,maxP2,res,max1,max2:integer;
+begin
+max3:=0;
+max13:=0;
+max39:=0;
+max1:=0;
+max2:=0;
+maxP2:=0;
+readln(a);
+while a <> 0 do
+begin
+    if (a > min(max1,max2)) then
+    begin
+      if(max1 > max2) then
+        max2:=a
+      else
+        max1:=a;  
+    end;
+    if ((a mod 39 = 0) and (a> max39))then
+    begin
+      max39:=a;
+      if ((a = max39) and ( max39 > min(max3,max13)))then
+        maxP2:=a;
+    end
+  else
+  begin
+    if ((a mod 3 = 0) and (a > max3))then
+      max3:=a;
+    if ((a mod 13 = 0) and (a > max13))then
+      max13:= a;
+    if a = max(max3,max13)then
+    begin
+      if max3 > max13 then
+        max13:=a
+      else
+        max3:=a;
+    end;  
+  end;
+  readln(a);
+end;
+res:=max3*max13;
+if (max39 > min(max3,max13))then
+  res:=max39*max(max3,max13);
+if res = 0 then
+  res:=max1*max2;
+writeln(res);  
+end.
